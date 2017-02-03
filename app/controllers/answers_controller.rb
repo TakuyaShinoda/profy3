@@ -18,7 +18,7 @@ class AnswersController < ApplicationController
   end
 
   def redirect
-  	if Answer.exist?(question_id: params[:question_id], user_id: current_user.id)
+  	if Answer.exists?(question_id: params[:question_id], user_id: current_user.id)
   	  redirect_to :root
   	end
   end
