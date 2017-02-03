@@ -12,7 +12,7 @@ class AnswersController < ApplicationController
 
   private
   def create_params
-  	params.require(:answers).permit(:text, :question_id).merge(user_id: current_user.id)
+  	params.require(:answer).permit(:text, :question_id).merge(user_id: current_user.id)
   end
 
 end
